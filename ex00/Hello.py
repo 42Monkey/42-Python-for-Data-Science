@@ -3,18 +3,22 @@ ft_tuple = ("Hello", "toto!")
 ft_set = {"Hello", "Hello", "tutu!"}
 ft_dict = {"Hello" : "titi!"}
 
+# lists are ordered, mutable sequence allowing duplicates elements
 ft_list.append("World!")
 
-# tuples are immutable, use concatenation with a new tuple is required
-# [:1] means starts at index 0 and stop before index 1, a slight difference from regular indexing
+# tuple are ordered, immutable sequence, allowing duplicates elements
+# tuples are immutable, concatenation with a new tuple is required
+# [:1] starts at index 0 and stops before index 1 (exclusive stop index)
 ft_tuple = ft_tuple[:1] + ("Thailand!",)
 
+# set are unordered collection of unique elements
 # to modify a set, must remove the old value and add the new one
-# python sets are unordered, could get {'Bangkok!', 'Hello'}, normal behaviour
+# sets are unordered, printed output can vary (normal behaviour)
 ft_set.remove("tutu!")
 ft_set.add("Bangkok!")
 
-# dictionaries are key-paired values, just needed to modify the value of the first key
+# dicttionaries are a collection of unique key-value pairs
+# just needed to modify the value of the first key
 ft_dict["Hello"] = "42Bangkok!"
 
 print(ft_list)
